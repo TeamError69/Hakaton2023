@@ -1,0 +1,16 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+logic_module = { path = "../logic_module" }
+clap = { version = "4.4.6", features = ["derive"]}
+lazy_static = "1.4.0"
+
+actix-web = "4"
+tokio = { version = "1.33.0", features = ["macros", "rt", "rt-multi-thread"] }
+
+utoipa = { version = "3", features = ["actix_extras"] }
